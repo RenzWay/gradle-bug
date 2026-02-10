@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Android Gradle Bug Reference</title>
+    <link rel="stylesheet" href="./src/style/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>🐛 Android Gradle Bug Reference</h1>
+        <p>Solusi untuk Kotlin Parcelize Configuration</p>
+      </header>
+
+      <div class="content">
+        <article id="bug-list" class="cards-grid">
+          <!-- Gradle App Card -->
+          <div class="card">
+            <div class="card-header">
+              <h2>📱 Gradle:app</h2>
+            </div>
+            <figure class="card-image">
+              <img
+                src="./public/gradle_app.png"
+                alt="Gradle App Configuration" />
+            </figure>
+            <div class="card-body">
+              <h3>Implementation Code</h3>
+              <div class="code-block">
+                <pre><code id="gradleApp"></code></pre>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gradle Module Card -->
+          <div class="card">
+            <div class="card-header">
+              <h2>📦 Gradle:module</h2>
+            </div>
+            <figure class="card-image">
+              <img
+                src="./public/gradle_project.png"
+                alt="Gradle Module Configuration" />
+            </figure>
+            <div class="card-body">
+              <h3>Implementation Code</h3>
+              <div class="code-block">
+                <pre><code id="gradleModule"></code></pre>
+              </div>
+            </div>
+          </div>
+
+          <!-- Libs Version Card -->
+          <div class="card">
+            <div class="card-header">
+              <h2>📚 libs.versions.toml</h2>
+            </div>
+            <figure class="card-image">
+              <img
+                src="./public/lib_version.png"
+                alt="Gradle Module Configuration" />
+            </figure>
+            <div class="card-body">
+              <h3>Version Configuration</h3>
+              <div class="code-block">
+                <pre><code id="libsVersion"></code></pre>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <!-- Image Preview Modal -->
+    <div id="imageModal" class="modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+        <img id="modalImage" src="" alt="Preview" class="modal-image" />
+      </div>
+    </div>
+
+    <script type="module" src="./src/script.js"></script>
+  </body>
+</html>
