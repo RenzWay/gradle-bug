@@ -1,23 +1,26 @@
 {
   "name": "gradle",
   "module": "index.ts",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "typecheck": "tsc --noEmit"
+  },
+  "type": "module",
   "devDependencies": {
     "@types/bun": "latest",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "react-router-dom": "^7.15.0",
-    "vite": "^8.0.11"
+    "vite": "^8.0.11",
+    "typescript": "^5.5.0"
   },
   "peerDependencies": {
     "typescript": "^5"
   },
-  "private": true,
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build"
-  },
-  "type": "module",
   "dependencies": {
+    "@types/react": "^19.2.14",
     "@vitejs/plugin-react": "^6.0.1"
   }
 }

@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import { BUG_DATA } from '../../data/data';
-import MaterialIcons from './materialIcons';
+import React, { useState } from "react";
+import { BUG_DATA } from "../../data/data";
+import MaterialIcons from "./materialIcons";
+import ParcelizeCompose from "./parcelizeCompose";
 
 const App = () => {
   const [selectedImg, setSelectedImg] = useState(null);
@@ -19,13 +20,17 @@ const App = () => {
               <div className="card-header">
                 <h2>{item.title}</h2>
               </div>
-              <figure className="card-image" onClick={() => setSelectedImg(item)}>
+              <figure
+                className="card-image"
+                onClick={() => setSelectedImg(item)}>
                 <img src={item.image} alt={item.title} />
               </figure>
               <div className="card-body">
                 <h3>{item.subTitle}</h3>
                 <div className="code-block">
-                  <pre><code>{item.code}</code></pre>
+                  <pre>
+                    <code>{item.code}</code>
+                  </pre>
                 </div>
               </div>
             </div>
@@ -38,13 +43,22 @@ const App = () => {
         <div className="modal active" onClick={() => setSelectedImg(null)}>
           <div className="modal-overlay"></div>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close" onClick={() => setSelectedImg(null)}>&times;</button>
-            <img src={selectedImg.image} alt="Preview" className="modal-image" />
+            <button
+              className="modal-close"
+              onClick={() => setSelectedImg(null)}>
+              &times;
+            </button>
+            <img
+              src={selectedImg.image}
+              alt="Preview"
+              className="modal-image"
+            />
           </div>
         </div>
       )}
       <br />
-      <MaterialIcons/>
+      <MaterialIcons />
+      <ParcelizeCompose></ParcelizeCompose>
     </main>
   );
 };
