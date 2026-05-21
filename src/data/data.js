@@ -156,5 +156,13 @@ dependencies {
     lifecycle-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycleLivedataKtx" }
 
     `
+  },
+  {
+    id: "gradle-properties",
+    title: "gradle.properties",
+    image: "./gradle-properties-room.png",
+    subTitle: "Implementation Code",
+    code: `
+    android.disallowKotlinSourceSets=false`
   }
 ];
