@@ -102,3 +102,59 @@ android.newDsl=false
 `,
   },
 ];
+
+export const ROOM_LIBRARY = [
+  {
+    id: "gradle-app",
+    title: "📱 Gradle:app",
+    image: "./build-gradle-app-room.png",
+    subTitle: "Implementation Code",
+    code: `plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.compose)
+    id("com.google.devtools.ksp")
+}
+
+dependencies {
+    implementation(libs.androidx.compose.runtime.livedata)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.lifecycle.livedata.ktx)
+    implementation(libs.androidx.room.runtime)
+    ksp(libs.room.compiler)
+    }`,
+  },
+  {
+    id: "gradle-module",
+    title: "📦 Gradle:module",
+    image: "./build-gradle-project-room.png",
+    subTitle: "Implementation Code",
+    code:`plugins {
+    alias(libs.plugins.android.application) apply false
+    alias(libs.plugins.kotlin.compose) apply false
+    id("com.google.devtools.ksp") version "2.3.2" apply false
+}
+    `
+  },
+  {
+    id: "libs-version",
+    title: "📚 libs.versions.toml",
+    image: "./lib-version-room.png",
+    subTitle: "Version Configuration",
+    code: `
+    [version]
+    lifecycleLivedataKtx = "2.10.0"
+    lifecycleViewmodelKtx = "2.10.0"
+    roomCompiler = "2.8.4"
+    roomRuntime = "2.8.4"
+    runtimeLivedata = "1.11.2"
+    
+    [libraries]
+    androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
+    androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomRuntime" }
+    room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomCompiler" }
+    androidx-compose-runtime-livedata = { group = "androidx.compose.runtime", name = "runtime-livedata", version.ref = "runtimeLivedata" }
+    lifecycle-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycleLivedataKtx" }
+
+    `
+  }
+];

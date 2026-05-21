@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BUG_DATA } from "../../data/data";
 import MaterialIcons from "./materialIcons";
 import ParcelizeCompose from "./parcelizeCompose";
+import RoomLibrary from "./roomAndroid";
 
 const App = () => {
   const [selectedImg, setSelectedImg] = useState(null);
@@ -59,6 +60,7 @@ const App = () => {
       <br />
       <MaterialIcons />
       <ParcelizeCompose></ParcelizeCompose>
+      <RoomLibrary></RoomLibrary>
     </main>
   );
 };
